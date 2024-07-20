@@ -323,7 +323,7 @@ void calculateBackwardValuesSpeedMode(){
 
 void calculateForwardValuesSpeedMode(){
   // All these turn power values are changed because of a UI change
-  
+
   turn_power = 0;
   // If trying to turn right,
   if (raw_x > (RESTING_X_RAW + SENSITIVITY_X)){
@@ -376,6 +376,7 @@ void calculateForwardValuesSpeedMode(){
 
 void pushMotorsSpeedMode(bool debug){
   if (braking == true){
+    // Debug statement to test proper braking function calls
     if (debug == true){
       Serial.println("Braking...");
     }
